@@ -18,6 +18,10 @@ export const CastItem = styled.li`
   margin: 0;
   max-width: 300px;
   height: 100%;
+
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
 `;
 
 export const Image = styled.img`
