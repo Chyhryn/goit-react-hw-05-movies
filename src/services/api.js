@@ -6,6 +6,7 @@ export const getTrandingMovies = async () => {
   const {
     data: { results },
   } = await axios.get(`/trending/all/day?api_key=${API_KEY}`);
+
   return results;
 };
 
@@ -13,6 +14,7 @@ export const getMovieById = async id => {
   const { data } = await axios.get(
     `/movie/${id}?api_key=${API_KEY}&language=en-US`
   );
+
   return data;
 };
 
@@ -29,6 +31,7 @@ export const getMovieCast = async id => {
   const {
     data: { cast },
   } = await axios.get(`/movie/${id}/credits?api_key=${API_KEY}&language=en-US`);
+
   return cast;
 };
 
@@ -38,5 +41,6 @@ export const getMovieReviews = async id => {
   } = await axios.get(
     `/movie/${id}/reviews?api_key=${API_KEY}&language=en-US&page=1`
   );
+
   return results;
 };

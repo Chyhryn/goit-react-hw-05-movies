@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieReviews } from 'services/api';
-import { NoReviwsNotification } from './Reviews.styled';
+import { Author, NoReviwsNotification } from './Reviews.styled';
 
 const Reviews = () => {
   const { movieId } = useParams();
@@ -17,11 +17,11 @@ const Reviews = () => {
 
   return (
     <>
-      {reviews.lenght > 0 ? (
+      {reviews.length > 0 ? (
         <ul>
           {reviews.map(({ id, author, content }) => (
             <li key={id}>
-              <p>Author: {author}</p>
+              <Author>Author: {author}</Author>
               <p>{content}</p>
             </li>
           ))}

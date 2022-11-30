@@ -24,6 +24,7 @@ export const Button = styled.button`
   background-color: transparent;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
