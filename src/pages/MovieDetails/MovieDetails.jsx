@@ -21,7 +21,6 @@ const MovieDetails = () => {
   const { movieId } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
-  const backLinkHref = location.state?.from ?? '/movies';
 
   useEffect(() => {
     getMovieById(movieId).then(setMovie);
@@ -32,7 +31,7 @@ const MovieDetails = () => {
   }
 
   const onClick = () => {
-    navigate(backLinkHref);
+    navigate(location.state?.from);
   };
 
   return (
@@ -72,10 +71,14 @@ const MovieDetails = () => {
         <h3>Additional information</h3>
         <List>
           <ListItem>
-            <NavItem to="cast">Cast</NavItem>
+            <NavItem to="cast" state={{ from: location.state?.from }}>
+              Cast
+            </NavItem>
           </ListItem>
           <ListItem>
-            <NavItem to="reviews">Reviews</NavItem>
+            <NavItem to="reviews" state={{ from: location.state?.from }}>
+              Reviews
+            </NavItem>
           </ListItem>
         </List>
       </OtherInfoWrapper>
