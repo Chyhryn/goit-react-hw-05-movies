@@ -31,7 +31,7 @@ const MovieDetails = () => {
   }
 
   const onClick = () => {
-    navigate(location.state?.from);
+    navigate(location.state?.from ?? '/movies');
   };
 
   return (
